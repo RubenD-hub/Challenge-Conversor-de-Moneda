@@ -1,0 +1,6 @@
+Dolar ==>> Peso Argentino	USD	ARS
+Peso Argentino ==>> Dolar	ARS	USD
+Dolar ==>> Real Brasileño	USD	BRL
+Real Brasileño ==>> Dolar	BRL	USD
+Dolar ==>> Peso Colombiano	USD	COP
+Peso Colombiano ==>> Dolar	COP	USD
