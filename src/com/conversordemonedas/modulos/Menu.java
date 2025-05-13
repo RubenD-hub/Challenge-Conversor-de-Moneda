@@ -3,30 +3,24 @@ package com.conversordemonedas.modulos;
 import java.util.*;
 
 public class Menu {
-    private ArrayList<String> opciones = new ArrayList<>(Arrays.asList(
-            "Dolar =>> Peso Argentino",
-            "Peso Argentino =>> Dolar",
-            "Dolar =>> Real Brasileño",
-            "Real Brasileño =>> Dolar",
-            "Dolar =>> Peso Colombiano",
-            "Peso Colombiano =>> Dolar",
-            "Salir"));
-    private Scanner scan;
+    private final Scanner scan;
 
     public Menu() {
         this.scan = new Scanner(System.in);
     }
 
-    public void mostrarMenu() {
+    public void mostrarMenu(List<TipoDeConversion> lista) {
+
         System.out.println("\t==========  MENÚ  ==========");
-        for (int i = 0; i < opciones.size(); i++) {
-            System.out.printf("\t%d. %s\n", i + 1, opciones.get(i));
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.printf("\t%d. %s\n", i + 1, lista.get(i).conversion());
         }
+        System.out.println("\t" + (lista.size() + 1) + ". Salir");
     }
 
-    public int mostrarYSeleccionar() {
+    public int mostrarYSeleccionar(List<TipoDeConversion> lista) {
 
-        mostrarMenu();
+        mostrarMenu(lista);
 
         int opcion;
         while (true) {
@@ -35,7 +29,7 @@ public class Menu {
 
             try {
                 opcion = scan.nextInt();
-                if (opcion < 1 || opcion > opciones.size()) {
+                if (opcion < 1 || opcion > lista.size() + 1) {
                     System.out.println("\t¡¡Opción incorrecta!!\n\tVuelva a intentarlo.");
                     continue;
                 }
