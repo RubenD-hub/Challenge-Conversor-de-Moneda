@@ -13,7 +13,19 @@ public record Moneda(String result,
         this(result, time_last_update_unix, time_last_update_utc, base_code, new HashMap<>());
     }
 
-    public float CalculoConversion(float monto, String monedaAConvertir){
-        return monto*conversion_rates.get(monedaAConvertir);
+    public float CalculoConversion(float monto, String monedaAConvertir) {
+        return monto * conversion_rates.get(monedaAConvertir);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("""
+                            Datos de moneda:
+                                Resultado del request: %s
+                                Ultima actualización(UNIX): %d
+                                Ultima actualización(UTC): %s
+                                Código de Moneda: %s
+                                Tasas de conversion: %s
+                """, result(), time_last_update_unix(), time_last_update_utc(), base_code(), conversion_rates());
     }
 }
