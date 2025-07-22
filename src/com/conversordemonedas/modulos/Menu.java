@@ -2,6 +2,8 @@ package com.conversordemonedas.modulos;
 
 import java.util.*;
 
+import static com.conversordemonedas.estilos.EstilosAnsi.*;
+
 public class Menu {
     private final Scanner scan;
 
@@ -10,11 +12,11 @@ public class Menu {
     }
 
     public void mostrarMenu(List<TipoDeConversion> lista) {
-        System.out.println("\t==========  MENÚ  ==========");
+        System.out.println(MAGENTA + "♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦  MENÚ  ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦");
         for (int i = 0; i < lista.size(); i++) {
-            System.out.printf("\t%d. %s\n", i + 1, lista.get(i).conversion());
+            System.out.printf(CYAN + "\t%d. %s\n", i + 1, lista.get(i).conversion());
         }
-        System.out.println("\t" + (lista.size() + 1) + ". Salir");
+        System.out.println(ROJO + "\t" + (lista.size() + 1) + ". Salir" + RESET);
     }
 
     public int mostrarYSeleccionar(List<TipoDeConversion> lista) {

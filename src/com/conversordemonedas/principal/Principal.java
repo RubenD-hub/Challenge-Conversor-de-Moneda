@@ -1,5 +1,7 @@
 package com.conversordemonedas.principal;
 
+import static com.conversordemonedas.estilos.EstilosAnsi.*;
+
 import com.conversordemonedas.modulos.*;
 
 import java.util.List;
@@ -15,8 +17,9 @@ public class Principal {
         LecturaArchivoConversion archivo = new LecturaArchivoConversion();
         ConsultaMoneda conversionAPI = new ConsultaMoneda();
 
-        System.out.println("***************************************************");
-        System.out.println("\t* Bienvenido/a a la App de cambio de Divisa *\n");
+        System.out.println(VERDE + "╔═════════════════════════════════════════════════════════╗");
+        System.out.println("║   🌐 Bienvenido/a a la App de cambio de Divisa 💲➡️💵   ║");
+        System.out.println("╚═════════════════════════════════════════════════════════╝" + RESET);
 
 //      Lectura de archivo y despliegue del menu
         List<TipoDeConversion> listaConversion = archivo.leerArchivo();
@@ -37,7 +40,8 @@ public class Principal {
             System.out.print("\t\t -> Ingresa el valor que deseas convertir: ");
             float monto = scan.nextFloat();
             float montoFinal = moneda.CalculoConversion(monto, monedaAConvertir.monedaFinal());
-            System.out.printf("\t\t  El valor de %.5f [%s] corresponde al valor final de: %.5f [%s]\n",
+            System.out.printf("\t\t  El valor de " + VERDE + "%.5f [%s]" + RESET + " corresponde al valor final de: "
+                            + VERDE + "%.5f [%s]\n" + RESET,
                     monto,
                     monedaAConvertir.monedaInicial(),
                     montoFinal,
@@ -50,8 +54,8 @@ public class Principal {
             }
         }
 
-        System.out.println("\n\t* Fin de la Ejecución de la aplicación *");
-        System.out.println("***************************************************");
+        System.out.println(ROJO + "\n\t* Fin de la Ejecución de la aplicación *");
+        System.out.println("***************************************************" + RESET);
 
     }
 }
