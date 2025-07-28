@@ -2,13 +2,11 @@ package com.conversordemonedas.modulos;
 
 import com.google.gson.*;
 
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static com.conversordemonedas.estilos.EstilosAnsi.*;
@@ -42,12 +40,7 @@ public class GenerarHistorial {
 //            Gson gson = new GsonBuilder().setPrettyPrinting().create();
             Gson gson = new GsonBuilder()
                     .setPrettyPrinting()
-                    .registerTypeAdapter(LocalDateTime.class, new JsonSerializer<LocalDateTime>() {
-                        @Override
-                        public JsonElement serialize(LocalDateTime src, java.lang.reflect.Type typeOfSrc, JsonSerializationContext context) {
-                            return new JsonPrimitive(src.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-                        }
-                    })
+                    .registerTypeAdapter(LocalDateTime.class, (JsonSerializer<LocalDateTime>) (src, typeOfSrc, context) -> new JsonPrimitive(src.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))))
                     .create();
             gson.toJson(registros, writer);
         } catch (IOException e) {
