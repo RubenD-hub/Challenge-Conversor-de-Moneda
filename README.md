@@ -80,18 +80,20 @@ Su construcción fue mediante las siguientes herramientas:
 3. Compilar y ejecutar el proyecto.
 
 ## 🛶Funcionamiento
+En el siguiente GIF podemos ver el funcionamiento principal de la apliccaion.
+<img src="img/Funcionamiento.gif" alt="Funcionamiento" width="500">
 
 ### 🚓Evaluaciones y Restricciones
 
 ## Roadmap
-En esta primera version, se logro el objetivos del sorteo, pero aun se podría mejorar agregando mas características haciendo mas util y entretenido el juego.
+En esta primera version, se logró el objetivo de la aplicacion de conversion de divisas y la conservacion del historial de conversiones.
+Pero aún se puede tener mejoras futuras:
+- [x] Conversion de divisas.
+- [x] Conservacion de historial de conversiones.
+- [ ] Agregar nuevas conversiones desde el menu.
+- [ ] Mantener un historial más avanzado
 
-- [X] Añadir amigos
-- [X] Sorteo de amigo
-- [ ] Agregar restriccion de nombres repetidos
-- [ ] Sortear todos los nombres agregados
-- [ ] Eliminar los nombres ya sorteados de la lista
-- [ ] Reinicio del juego mediante un botón u otra forma.
+
 
 <p align="right"><a href="#readme-top">regresar al inicio</a></p>
 
@@ -101,4 +103,3 @@ En esta primera version, se logro el objetivos del sorteo, pero aun se podría m
 
 [GitHub]:https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white
 [Alura]:https://custom-icon-badges.demolab.com/badge/Alura-001332?logo=alura-white&logoColor=fff
-
