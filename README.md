@@ -37,6 +37,7 @@ Este interesante proyecto, haremos uso de los conocimientos aprendidos en el cur
 **Java Orientación a Objetos** impartido por **ALURA Latam - ONE** (Oracle Next Education).
 
 Este proyecto hará uso de:
+
 - Listas
 - Programacion Orientada a Objetos POO
 - Lectura y Escritura de archivos de texto y JSON
@@ -44,10 +45,12 @@ Este proyecto hará uso de:
 - Uso de excepciones
 
 Con lo que creamos una aplicación para la converion de divisas, mediante el ingreso del
-monto a convertir a su equivalencia en otra divisa, con la ayuda de la API [ExchangeRate-API](https://www.exchangerate-api.com/img/hr-logo-2022-ldpi-rc.png)
+monto a convertir a su equivalencia en otra divisa, con la ayuda de la
+API [ExchangeRate-API](https://www.exchangerate-api.com/img/hr-logo-2022-ldpi-rc.png)
 para obtener las tasas de cambio actualizadas.
 
 Otras funcionalidades que ofrece la aplicacion son:
+
 - Agregar los tipos de conversion
 - Poder hacer diferentes tipos de conversion
 - Manejo de errores
@@ -66,12 +69,15 @@ Su construcción fue mediante las siguientes herramientas:
 ![GitHub]
 
 ## 🛠Cómo empezar.
+
 ### 📜Requisitos
-- Tener instalado Java JDK 17.0.6. 
+
+- Tener instalado Java JDK 17.0.6.
 - OPCIONAL: Un IDE que ejecute Java (IntelliJIDEA, NeatBeans)
 - Conexión a internet para consultar la API.
 
 ### 🔢 Pasos
+
 1. Descargar o clonar este repositorio.
 
    `https://github.com/RubenD-hub/Challenge-Conversor-de-Moneda.git`
@@ -80,26 +86,62 @@ Su construcción fue mediante las siguientes herramientas:
 3. Compilar y ejecutar el proyecto.
 
 ## 🛶Funcionamiento
+
 En el siguiente GIF podemos ver el funcionamiento principal de la apliccaion.
 <img src="img/Funcionamiento.gif" alt="Funcionamiento" width="500">
+
+### ✅ Menu principal
+
+Al ejecutar la aplicacion, lo primero que podemos encontrar es un menu principal con 3 opciones.
+<img src="img/img1.PNG" alt="Menu principal" width="300">
+
+#### 🔀 Convertir moneda
+
+La primera opcion nos permitira hacer una serie de conversiones disponibles, que se mostraran en un submenu.
+<img src="img/img2.PNG" alt="Menu principal" width="300">
+
+> [!NOTE]
+> Si se requiere agregar otro tipo de conversion, se tiene que agregar de manera 
+manual en el archivo `Tipo_De_Conversion.txt`, respetando el formato y los datos solicitados.
+> <img src="img/img3.PNG" alt="Menu principal" width="300">
+
+Al eleguir un tipo de conversion, nos solicitará el monto a convertir, después arrojará el
+monto convertido a la nueva moneda selecionada. Por último preguntará si se requiere hacer
+otra conversion.
+
+<img src="img/img4.PNG" alt="Menu principal" width="400">
+
+En el caso de que se seleccione la opcion de `Regresar` o ya no se desea hacer otra conversion, 
+la siguiente accion será regresar al menu principal.
+
+#### 🔙 Historial de conversiones
+Esta opcion nos permitira obtener el historial de las conversiones consultadas.
+<img src="img/img5.PNG" alt="Menu principal" width="300">
+
+En el caso de que no se halla echo ninguna consulta, el historial aparecera vacio.
+<img src="img/img6.PNG" alt="Menu principal" width="300">
 
 ### 🚓Evaluaciones y Restricciones
 
 ## Roadmap
-En esta primera version, se logró el objetivo de la aplicacion de conversion de divisas y la conservacion del historial de conversiones.
+
+En esta primera version, se logró el objetivo de la aplicacion de conversion de divisas y la conservacion del historial
+de conversiones.
 Pero aún se puede tener mejoras futuras:
+
 - [x] Conversion de divisas.
 - [x] Conservacion de historial de conversiones.
 - [ ] Agregar nuevas conversiones desde el menu.
 - [ ] Mantener un historial más avanzado
 
-
-
 <p align="right"><a href="#readme-top">regresar al inicio</a></p>
 
 [Java]:https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&logoColor=white
+
 [IntelliJ IDEA]:https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white
+
 [Git]:https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff
 
 [GitHub]:https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white
+
 [Alura]:https://custom-icon-badges.demolab.com/badge/Alura-001332?logo=alura-white&logoColor=fff
