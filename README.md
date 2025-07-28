@@ -88,16 +88,19 @@ Su construcción fue mediante las siguientes herramientas:
 ## 🛶Funcionamiento
 
 En el siguiente GIF podemos ver el funcionamiento principal de la apliccaion.
+
 <img src="img/Funcionamiento.gif" alt="Funcionamiento" width="500">
 
 ### ✅ Menu principal
 
 Al ejecutar la aplicacion, lo primero que podemos encontrar es un menu principal con 3 opciones.
+
 <img src="img/img1.PNG" alt="Menu principal" width="300">
 
 #### 🔀 Convertir moneda
 
 La primera opcion nos permitira hacer una serie de conversiones disponibles, que se mostraran en un submenu.
+
 <img src="img/img2.PNG" alt="Menu principal" width="300">
 
 > [!NOTE]
@@ -116,13 +119,16 @@ la siguiente accion será regresar al menu principal.
 
 #### 🔙 Historial de conversiones
 Esta opcion nos permitira obtener el historial de las conversiones consultadas.
+
 <img src="img/img5.PNG" alt="Menu principal" width="300">
 
 En el caso de que no se halla echo ninguna consulta, el historial aparecera vacio.
+
 <img src="img/img6.PNG" alt="Menu principal" width="300">
 
 #### ❌ Salir
 La última opcion `Salir` termina la ejecucioin de la aplicacion.
+
 <img src="img/img7.PNG" alt="Menu principal" width="300">
 
 ### 🚓Excepciones y contramedidas
