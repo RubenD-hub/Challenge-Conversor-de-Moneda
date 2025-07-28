@@ -14,18 +14,21 @@
 </div>
 
 ---
-
 <details>
-
-  <summary>Indice</summary>
+<summary>Indice</summary>
 
 - [🤔Acerca del proyecto](#acerca-del-proyecto)
 - [👷‍♂️Construido con:](#️construido-con)
 - [🛠Cómo empezar.](#cómo-empezar)
-    - [📜Requisitos](#requisitos)
-    - [💻](#)
+  - [📜Requisitos](#requisitos)
+  - [🔢 Pasos](#-pasos)
 - [🛶Funcionamiento](#funcionamiento)
-    - [🚓Evaluaciones y Restricciones](#evaluaciones-y-restricciones)
+  - [✅ Menu principal](#-menu-principal)
+    - [🔀 Convertir moneda](#-convertir-moneda)
+    - [🔙 Historial de conversiones](#-historial-de-conversiones)
+    - [❌ Salir](#-salir)
+  - [🚓Excepciones y contramedidas](#excepciones-y-contramedidas)
+- [Roadmap](#roadmap)
 
 </details>
 
