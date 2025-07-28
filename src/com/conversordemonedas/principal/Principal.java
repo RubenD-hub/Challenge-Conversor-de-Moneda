@@ -16,6 +16,7 @@ public class Principal {
         Menu menu = new Menu();
         LecturaArchivoConversion archivo = new LecturaArchivoConversion();
         ConsultaMoneda conversionAPI = new ConsultaMoneda();
+        GenerarHistorial historial = new GenerarHistorial();
 
         System.out.println(VERDE + "╔═════════════════════════════════════════════════════════╗");
         System.out.println("║   🌐 Bienvenido/a a la App de cambio de Divisa 💲➡️💵   ║");
@@ -29,10 +30,10 @@ public class Principal {
             int opc = menu.menuPrincipal();
             switch (opc) {
                 case 1:
-                    ConvertirMoneda(listaConversion, menu, conversionAPI, scan);
+                    ConvertirMoneda(listaConversion, menu, conversionAPI,historial, scan);
                     break;
                 case 2:
-                    HistorialConversiones();
+                    HistorialConversiones(historial);
                     break;
             }
 
@@ -45,7 +46,7 @@ public class Principal {
         System.out.println("***************************************************" + RESET);
     }
 
-    public static void ConvertirMoneda(List<TipoDeConversion> listaConversion, Menu menu, ConsultaMoneda conversionAPI, Scanner scan) {
+    public static void ConvertirMoneda(List<TipoDeConversion> listaConversion, Menu menu, ConsultaMoneda conversionAPI, GenerarHistorial historial, Scanner scan) {
         while (true) {
             int opc = menu.mostrarYSeleccionar(listaConversion);
 //      Rompe el bucle por seleccionar la opción regresar
@@ -67,6 +68,7 @@ public class Principal {
                     monedaAConvertir.monedaInicial(),
                     montoFinal,
                     monedaAConvertir.monedaFinal());
+            historial.agregarRegistro(monedaAConvertir.monedaInicial(),monto,monedaAConvertir.monedaFinal(),montoFinal);
 //          Pregunta si se desea hacer otra conversion
             if (menu.OtraConversion() == 2) {
                 break;
@@ -74,7 +76,7 @@ public class Principal {
         }
     }
 
-    public static void HistorialConversiones() {
-        System.out.println();
+    public static void HistorialConversiones(GenerarHistorial historial) {
+        historial.mostrarRegistro();
     }
 }
