@@ -11,7 +11,7 @@ public class Principal {
 
     public static void main(String[] args) {
 
-//      Instancias a clases
+//      Intancias a clases
         Scanner scan = new Scanner(System.in);
         Menu menu = new Menu();
         LecturaArchivoConversion archivo = new LecturaArchivoConversion();
@@ -26,8 +26,29 @@ public class Principal {
 
 //      Bucle principal
         while (true) {
-            int opc = menu.mostrarYSeleccionar(listaConversion);
+            int opc = menu.menuPrincipal();
+            switch (opc) {
+                case 1:
+                    ConvertirMoneda(listaConversion, menu, conversionAPI, scan);
+                    break;
+                case 2:
+                    HistorialConversiones();
+                    break;
+            }
+
 //          Rompe el bucle por seleccionar la opción salir
+            if (opc == 3) {
+                break;
+            }
+        }
+        System.out.println(ROJO + "\n\t* Fin de la Ejecución de la aplicación *");
+        System.out.println("***************************************************" + RESET);
+    }
+
+    public static void ConvertirMoneda(List<TipoDeConversion> listaConversion, Menu menu, ConsultaMoneda conversionAPI, Scanner scan) {
+        while (true) {
+            int opc = menu.mostrarYSeleccionar(listaConversion);
+//      Rompe el bucle por seleccionar la opción regresar
             if (opc == listaConversion.size() + 1) {
                 break;
             }
@@ -40,22 +61,20 @@ public class Principal {
             System.out.print("\t\t -> Ingresa el valor que deseas convertir: ");
             float monto = scan.nextFloat();
             float montoFinal = moneda.CalculoConversion(monto, monedaAConvertir.monedaFinal());
-            System.out.printf("\t\t  El valor de " + VERDE + "%.5f [%s]" + RESET + " corresponde al valor final de: "
+            System.out.printf(RESET + "\t\t  El valor de " + VERDE + "%.5f [%s]" + RESET + " corresponde al valor final de: "
                             + VERDE + "%.5f [%s]\n" + RESET,
                     monto,
                     monedaAConvertir.monedaInicial(),
                     montoFinal,
                     monedaAConvertir.monedaFinal());
-
 //          Pregunta si se desea hacer otra conversion
-            scan.nextLine();
-            if (menu.OtraConversion().equals("No")) {
+            if (menu.OtraConversion() == 2) {
                 break;
             }
         }
+    }
 
-        System.out.println(ROJO + "\n\t* Fin de la Ejecución de la aplicación *");
-        System.out.println("***************************************************" + RESET);
-
+    public static void HistorialConversiones() {
+        System.out.println();
     }
 }
