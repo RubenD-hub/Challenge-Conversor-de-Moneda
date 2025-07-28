@@ -4,8 +4,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import static com.conversordemonedas.estilos.EstilosAnsi.*;
-import static com.conversordemonedas.estilos.EstilosAnsi.RESET;
-import static com.conversordemonedas.estilos.EstilosAnsi.VERDE;
 
 public record Registro(String monedaInicial,
                        float monto,
@@ -17,7 +15,7 @@ public record Registro(String monedaInicial,
         this(monedaInicial, monto, monedaFinal, conversion, LocalDateTime.now());
     }
 
-    // Método para obtener la fecha formateada
+//  Metodo para obtener la fecha formateada
     public String fechaFormateada() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return fechaConversion().format(formatter);
@@ -35,14 +33,13 @@ public record Registro(String monedaInicial,
                         \t\t%s🕒 Fecha de solicitud: %s%s
                         \t\t%s═══════════════════════════════════════════════════════%s
                         """,
-                        VERDE,
-                        CYAN, AMARILLO, monedaInicial(),
-                        CYAN, AMARILLO, monto(),
-                        CYAN, AMARILLO, monedaFinal(),
-                        CYAN, AMARILLO, conversion(),
-                        CYAN, AMARILLO, fechaFormateada(),
-                        VERDE, RESET
+                VERDE,
+                CYAN, AMARILLO, monedaInicial(),
+                CYAN, AMARILLO, monto(),
+                CYAN, AMARILLO, monedaFinal(),
+                CYAN, AMARILLO, conversion(),
+                CYAN, AMARILLO, fechaFormateada(),
+                VERDE, RESET
         );
     }
-
 }
