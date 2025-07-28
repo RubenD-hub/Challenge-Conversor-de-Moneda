@@ -1,0 +1,4 @@
+Standard Requests
+https://www.exchangerate-api.com/docs/standard-requests
+Pair Conversion Requests
+https://www.exchangerate-api.com/docs/pair-conversion-requests

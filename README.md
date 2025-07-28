@@ -121,7 +121,18 @@ Esta opcion nos permitira obtener el historial de las conversiones consultadas.
 En el caso de que no se halla echo ninguna consulta, el historial aparecera vacio.
 <img src="img/img6.PNG" alt="Menu principal" width="300">
 
-### 🚓Evaluaciones y Restricciones
+#### ❌ Salir
+La última opcion `Salir` termina la ejecucioin de la aplicacion.
+<img src="img/img7.PNG" alt="Menu principal" width="300">
+
+### 🚓Excepciones y contramedidas
+Se tomaron en cuenta las posibles fallas que se pueden tener en la aplicacion como es ingresar datos no válidos,
+lo que provocaria posibles fallas.
+1. Ingresar opciones no disponibles.
+2. Valores negativos.
+3. Ingresar otro tipo de datos (letras).
+
+<img src="img/img8.PNG" alt="Menu principal" width="300">
 
 ## Roadmap
 
